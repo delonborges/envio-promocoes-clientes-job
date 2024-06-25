@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: envio-promocoes-clientes-job
+
+  datasource:
+    sbd:
+      username: username
+      password: password
+      jdbc-url: jdbc:mysql://localhost:3306/spring_batch?useSSL=false
+    app:
+      username: username
+      password: password
+      jdbc-url: jdbc:mysql://localhost:3306/envio_promocoes_clientes?useSSL=false
+
+  batch:
+    jdbc:
+      initialize-schema: always
+
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: ${MAILTRAP_USERNAME}
+    password: ${MAILTRAP_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          start:
+            enable: true
