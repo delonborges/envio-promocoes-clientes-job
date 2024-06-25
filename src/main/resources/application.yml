@@ -13,6 +13,8 @@ spring:
       jdbc-url: jdbc:mysql://localhost:3306/envio_promocoes_clientes?useSSL=false
 
   batch:
+    job:
+      enabled: false
     jdbc:
       initialize-schema: always
 
